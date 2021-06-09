@@ -1,0 +1,19 @@
+    this.apiService
+      .get<EpisodeOfCare[]>({
+        path: [
+         `tenant/environments/${envId}/eocs/${eocId}/hasDistributionRules`,
+          EpisodeOfCare.API_PATH,
+          this.envId,
+          'eocs',
+          this.eocId,
+          'hasDistribuitionRules',
+        ],
+        onSuccess: (eoc) => {
+          console.log(eoc);
+          //(this.hasDistributionRules = eoc), this.progress$.next(100);
+        },
+      })
+
+==================
+
+   //path: [`tenant/environments/${1}/eocs/${this.episodeTypeIdSelected}/hasDistributionRules`],
